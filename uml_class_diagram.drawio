@@ -1,0 +1,22 @@
+<mxfile host="app.diagrams.net" modified="2026-10-15T00:00:00.000Z" agent="ChatGPT" version="24.7.17">
+<diagram name="UML Class Diagram">
+<mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+<root>
+<mxCell id="0"/><mxCell id="1" parent="0"/>
+<mxCell id="2" value="<b>Customer</b><hr/>+ customerId: int<br/>+ fullName: String<br/>+ email: String<br/>+ phone: String<br/>+ register(): void<br/>+ placeOrder(): Order<br/>+ viewOrders(): List<Order>" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="40" y="40" width="220" height="170" as="geometry"/></mxCell>
+<mxCell id="3" value="<b>Restaurant</b><hr/>+ restaurantId: int<br/>+ name: String<br/>+ address: String<br/>+ phone: String<br/>+ addMenuItem(): void<br/>+ updateMenuItem(): void<br/>+ acceptOrder(): void" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="300" y="40" width="220" height="170" as="geometry"/></mxCell>
+<mxCell id="4" value="<b>MenuItem</b><hr/>+ itemId: int<br/>+ name: String<br/>+ price: double<br/>+ availability: boolean<br/>+ updatePrice(): void<br/>+ setAvailability(): void" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="560" y="40" width="220" height="170" as="geometry"/></mxCell>
+<mxCell id="5" value="<b>Order</b><hr/>+ orderId: int<br/>+ orderDate: Date<br/>+ status: String<br/>+ totalAmount: double<br/>+ createOrder(): void<br/>+ calculateTotal(): double<br/>+ updateStatus(): void" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="40" y="300" width="220" height="170" as="geometry"/></mxCell>
+<mxCell id="6" value="<b>OrderItem</b><hr/>+ quantity: int<br/>+ unitPrice: double<br/>+ subtotal: double<br/>+ calculateSubtotal(): double" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="300" y="300" width="220" height="170" as="geometry"/></mxCell>
+<mxCell id="7" value="<b>Payment</b><hr/>+ paymentId: int<br/>+ paymentDate: Date<br/>+ amount: double<br/>+ method: String<br/>+ status: String<br/>+ makePayment(): boolean<br/>+ refund(): void" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="560" y="300" width="220" height="170" as="geometry"/></mxCell>
+<mxCell id="8" value="<b>Delivery</b><hr/>+ deliveryId: int<br/>+ deliveryAddress: String<br/>+ deliveryDate: Date<br/>+ status: String<br/>+ assignDriver(): void<br/>+ updateStatus(): void" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="170" y="560" width="220" height="170" as="geometry"/></mxCell>
+<mxCell id="9" value="<b>DeliveryDriver</b><hr/>+ driverId: int<br/>+ fullName: String<br/>+ phone: String<br/>+ vehicleNumber: String<br/>+ acceptDelivery(): void<br/>+ completeDelivery(): void" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="470" y="560" width="220" height="170" as="geometry"/></mxCell>
+<mxCell id="10" value="1 / 1..*" edge="1" parent="1" source="2" target="3" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="11" value="1 / 1..*" edge="1" parent="1" source="3" target="4" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="12" value="1 / 0..*" edge="1" parent="1" source="2" target="5" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="13" value="1 / 1..*" edge="1" parent="1" source="5" target="6" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="14" value="1 / 1" edge="1" parent="1" source="5" target="7" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="15" value="0..* / 1" edge="1" parent="1" source="6" target="4" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="16" value="1 / 1" edge="1" parent="1" source="5" target="8" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="17" value="1 / 1" edge="1" parent="1" source="8" target="9" style="endArrow=none;html=1;"><mxGeometry relative="1" as="geometry"/></mxCell>
+</root></mxGraphModel></diagram></mxfile>
