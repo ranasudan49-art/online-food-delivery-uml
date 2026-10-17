@@ -4,7 +4,7 @@
 - Student 1: _Rana Sudan
 - Student ID: 202510331
 
-- Student 1: _safa
+- Student 2: _safa
 - Student ID: 202511576
 
 ## Project Idea
